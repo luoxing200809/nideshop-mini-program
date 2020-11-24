@@ -37,7 +37,7 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "仿网易严选",
+    "navigationBarTitleText": "载墨36行",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true
   },
@@ -54,22 +54,16 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/topic/topic",
-        "iconPath": "static/images/ic_menu_topic_nor.png",
-        "selectedIconPath": "static/images/ic_menu_topic_pressed.png",
-        "text": "专题"
-      },
-      {
         "pagePath": "pages/catalog/catalog",
         "iconPath": "static/images/ic_menu_sort_nor.png",
         "selectedIconPath": "static/images/ic_menu_sort_pressed.png",
         "text": "分类"
       },
       {
-        "pagePath": "pages/cart/cart",
-        "iconPath": "static/images/ic_menu_shoping_nor.png",
-        "selectedIconPath": "static/images/ic_menu_shoping_pressed.png",
-        "text": "购物车"
+        "pagePath": "pages/topic/topic",
+        "iconPath": "static/images/ic_menu_topic_nor.png",
+        "selectedIconPath": "static/images/ic_menu_topic_pressed.png",
+        "text": "专题"
       },
       {
         "pagePath": "pages/ucenter/index/index",
@@ -83,5 +77,6 @@
     "request": 10000,
     "downloadFile": 10000
   },
-  "debug": true
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
 }

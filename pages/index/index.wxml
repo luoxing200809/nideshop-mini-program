@@ -3,9 +3,10 @@
   <view class="search">
     <navigator url="/pages/search/search" class="input">
       <image class="icon"></image>
-      <text class="txt">商品搜索, 共{{goodsCount}}款好物</text>
+      <text class="txt">搜索</text>
     </navigator>
   </view>
+  <!-- banner封面图轮询
   <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
     <swiper-item wx:for="{{banner}}" wx:key="{{item.id}}">
       <navigator url="{{item.link}}">
@@ -13,111 +14,174 @@
       </navigator>
     </swiper-item>
   </swiper>
+-->
+  <image class="banner" interval="3000" duration="1000" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606209355482&di=a086fb8114893031dddab30646eeff04&imgtype=0&src=http%3A%2F%2Fwww.yichaoart.com%2Fenlarge%3Fsrc%3Dproducts_img%2F147%2F1403576050568.jpg" background-size="cover">
+  </image>
+<!-- 分属菜单
   <view class="m-menu">
     <navigator class="item" url="{{item.url}}" wx:for="{{channel}}" wx:key="{{item.id}}">
       <image src="{{item.icon_url}}" background-size="cover"></image>
       <text>{{item.name}}</text>
     </navigator>
   </view>
+  -->
+  <view class="m-menu">
+    <navigator class="item">
+      <image src="http://yanxuan.nosdn.127.net/9fe068776b6b1fca13053d68e9c0a83f.png" background-size="cover"></image>
+      <text>工</text>
+    </navigator>
+      
+    <navigator class="item">
+      <image src=" http://yanxuan.nosdn.127.net/ad8b00d084cb7d0958998edb5fee9c0a.png" background-size="cover"></image>
+      <text>农</text>
+    </navigator>
+    <navigator class="item">
+      <image src="http://yanxuan.nosdn.127.net/11abb11c4cfdee59abfb6d16caca4c6a.png" background-size="cover"></image>
+      <text >商</text>
+    </navigator>
+    <navigator class="item">
+      <image src="http://yanxuan.nosdn.127.net/c2a3d6349e72c35931fe3b5bcd0966be.png" background-size="cover"></image>
+      <text >学</text>
+    </navigator>
+    <navigator class="item">
+      <image src="http://yanxuan.nosdn.127.net/7093cfecb9dde1dd3eaf459623df4071.png" background-size="cover"></image>
+      <text>兵</text>
+    </navigator>
+    <navigator class="item">
+      <image src="http://yanxuan.nosdn.127.net/28a685c96f91584e7e4876f1397767db.png" background-size="cover"></image>
+      <text>更多</text>
+    </navigator>
+  </view>
   <view class="a-section a-brand">
     <view class="h">
-      <navigator url="../brand/brand">
-        <text class="txt">品牌制造商直供</text>
+      <navigator>
+        <text class="txt">火爆行业</text>
       </navigator>
     </view>
     <view class="b">
-      <view class="item item-1" wx:for="{{brand}}" wx:key="item.id">
+      <view class="item item-1">
         <navigator url="/pages/brandDetail/brandDetail?id={{item.id}}">
           <view class="wrap">
-            <image class="img" src="{{item.new_pic_url}}" mode="aspectFill"></image>
+            <image class="img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606212403901&di=4a800eb9eedd1d6c689f60e94586fa40&imgtype=0&src=http%3A%2F%2Fdata.shouxi.com%2Fupload%2Fimg%2Fd7%2F64%2Fd764b62aac3fd0b2e1750f8082c162e4.jpg" mode="aspectFill"></image>
             <view class="mt">
-              <text class="brand">{{item.name}}</text>
-              <text class="price">{{item.floor_price}}</text>
-              <text class="unit">元起</text>
+              <text class="brand">金融</text>
+            </view>
+          </view>
+        </navigator>
+      </view>
+      <view class="item item-1">
+        <navigator url="/pages/brandDetail/brandDetail?id={{item.id}}">
+          <view class="wrap">
+            <image class="img" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=179737469,146228257&fm=26&gp=0.jpg" mode="aspectFill"></image>
+            <view class="mt">
+              <text class="brand">科技</text>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <view class="b">
+      <view class="item item-1">
+        <navigator url="/pages/brandDetail/brandDetail?id={{item.id}}">
+          <view class="wrap">
+            <image class="img" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2506122143,730890269&fm=26&gp=0.jpg" mode="aspectFill"></image>
+            <view class="mt">
+              <text class="brand">医疗</text>
+            </view>
+          </view>
+        </navigator>
+      </view>
+      <view class="item item-1">
+        <navigator url="/pages/brandDetail/brandDetail?id={{item.id}}">
+          <view class="wrap">
+            <image class="img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606208995684&di=75ca0b55203714bdee2073dd202436c8&imgtype=0&src=http%3A%2F%2Fimg10.360buyimg.com%2Fn1%2Fjfs%2Ft16744%2F126%2F1582617861%2F77766%2F3e5d24f5%2F5ad0bfcfNcd318580.jpg" mode="aspectFill"></image>
+            <view class="mt">
+              <text class="brand">航天</text>
             </view>
           </view>
         </navigator>
       </view>
     </view>
   </view>
-  <view class="a-section a-new" wx:if="{{newGoods.length > 0}}">
-    <view class="h">
-      <view>
-        <navigator url="../newGoods/newGoods">
-          <text class="txt">周一周四 · 新品首发</text>
-        </navigator>
-      </view>
-    </view>
-    <view class="b">
-      <view class="item" wx:for="{{newGoods}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.id}}">
-        <navigator url="../goods/goods?id={{item.id}}">
-          <image class="img" src="{{item.list_pic_url}}" background-size="cover"></image>
-          <text class="name">{{item.name}}</text>
-          <text class="price">￥{{item.retail_price}}</text>
-        </navigator>
-      </view>
-    </view>
-  </view>
-  <view class="a-section a-popular" wx:if="{{hotGoods.length > 0}}">
-    <view class="h">
-      <view>
-        <navigator url="../hotGoods/hotGoods">
-          <text class="txt">人气推荐</text>
-        </navigator>
-      </view>
-    </view>
-    <view class="b">
-      <view class="item" wx:for="{{hotGoods}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.id}}">
-        <navigator url="/pages/goods/goods?id={{item.id}}">
-          <image class="img" src="{{item.list_pic_url}}" background-size="cover"></image>
-          <view class="right">
-            <view class="text">
-              <text class="name">{{item.name}}</text>
-              <text class="desc">{{item.goods_brief}}</text>
-              <text class="price">￥{{item.retail_price}}</text>
-            </view>
-          </view>
-        </navigator>
-      </view>
-    </view>
-  </view>
+  
+  
   <view class="a-section a-topic" wx:if="topics.length > 0">
     <view class="h">
       <view>
         <navigator url="../topic/topic" open-type="switchTab">
-          <text class="txt">专题精选</text>
+          <text class="txt">行业新闻</text>
         </navigator>
       </view>
     </view>
     <view class="b">
       <scroll-view scroll-x="true" class="list">
-        <view class="item" wx:for="{{topics}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.id}}">
+        <view class="item">
           <navigator url="../topicDetail/topicDetail?id={{item.id}}">
-            <image class="img" src="{{item.scene_pic_url}}" background-size="cover"></image>
+            <image class="img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606210322021&di=d62888e70cf4f12beb3d7581dac23892&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F16%2F08%2F14%2F1357b007d9de2f2.jpg!%2Ffwfh%2F804x596%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue" background-size="cover"></image>
             <view class="np">
-              <text class="name">{{item.title}}</text>
-              <text class="price">￥{{item.price_info}}元起</text>
+              <text class="name">四骏图</text>
+              <text class="price">【书法行业】</text>
             </view>
-            <text class="desc">{{item.subtitle}}</text>
+            <text class="desc">九溪书法协会，组织会员画新式四骏图，极大吸引了众多爱好者参与和学习。</text>
           </navigator>
         </view>
       </scroll-view>
     </view>
-  </view>
-  <view class="good-grid" wx:for="{{floorGoods}}" wx:key="{{item.id}}">
-    <view class="h">
-      <view>
-        <text>{{item.name}}</text>
-      </view>
+    <view class="b">
+      <scroll-view scroll-x="true" class="list">
+        <view class="item">
+          <navigator url="../topicDetail/topicDetail?id={{item.id}}">
+            <image class="img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606212015388&di=b086b71265e8825b63ab08ce6580dd32&imgtype=0&src=http%3A%2F%2Fku.90sjimg.com%2Felement_origin_min_pic%2F16%2F07%2F11%2F16578356eb65802.jpg" background-size="cover"></image>
+            <view class="np">
+              <text class="name">太极</text>
+              <text class="price">【武术行业】</text>
+            </view>
+            <text class="desc">九溪武术协会，组织会员画新式太极，极大吸引了众多爱好者参与和学习。</text>
+          </navigator>
+        </view>
+      </scroll-view>
     </view>
     <view class="b">
-      <block wx:for="{{item.goodsList}}" wx:for-index="iindex" wx:for-item="iitem" wx:key="{{iitem.id}}">
-        <navigator url="../goods/goods?id={{iitem.id}}" class="item">
-          <image class="img" src="{{iitem.list_pic_url}}" background-size="cover"></image>
-          <view class="name">{{iitem.name}}</view>
-          <view class="price">￥{{iitem.retail_price}}</view>
-        </navigator>
-      </block>
+      <scroll-view scroll-x="true" class="list">
+        <view class="item">
+          <navigator url="../topicDetail/topicDetail?id={{item.id}}">
+            <image class="img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606212809759&di=230bf03103ceacd098ec4e12b1738844&imgtype=0&src=http%3A%2F%2F03imgmini.eastday.com%2Fmobile%2F20180928%2F20180928180158_97f7b6b51b397e72930b2a2da34820b7_1.jpeg" background-size="cover"></image>
+            <view class="np">
+              <text class="name">秦军出兵</text>
+              <text class="price">【军事行业】</text>
+            </view>
+            <text class="desc">九溪军事协会，组织会员观看英雄体验秦军风格，极大吸引了众多爱好者参与和学习。</text>
+          </navigator>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="b">
+      <scroll-view scroll-x="true" class="list">
+        <view class="item">
+          <navigator url="../topicDetail/topicDetail?id={{item.id}}">
+            <image class="img" src="https://inews.gtimg.com/newsapp_bt/0/12815296060/1000" background-size="cover"></image>
+            <view class="np">
+              <text class="name">天宫二号</text>
+              <text class="price">【航天行业】</text>
+            </view>
+            <text class="desc">九溪航天协会，组织会员画观看天宫二号发射，极大吸引了众多爱好者参与和学习。</text>
+          </navigator>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="b">
+      <scroll-view scroll-x="true" class="list">
+        <view class="item">
+          <navigator url="../topicDetail/topicDetail?id={{item.id}}">
+            <image class="img" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3414837366,40463010&fm=26&gp=0.jpg" background-size="cover"></image>
+            <view class="np">
+              <text class="name">珠峰日落金山</text>
+              <text class="price">【旅游行业】</text>
+            </view>
+            <text class="desc">九溪旅游协会，组织会员一起观看珠峰日落金山，极大吸引了众多爱好者参与和学习。</text>
+          </navigator>
+        </view>
+      </scroll-view>
     </view>
   </view>
 </view>
